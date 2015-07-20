@@ -1,0 +1,23 @@
+<div class='container'>
+  <div class='row'>
+    <div class='col-md-5'>
+      <img class='phone' ng-src='{{ mainImageUrl }}'>
+    </div>
+    <div class='col-md-7'>
+      <h1>{{phone.name}}</h1>
+      <p>{{phone.description}}</p>
+      <ul class='phone-thumbs list-inline'>
+        <li ng-repeat='image in phone.images'>
+          <a class='btn btn-default'>
+            <img ng-click='setImage(image)' ng-src='{{image}}'>
+          </a>
+        </li>
+      </ul>
+      <h4>Specification:</h4>
+      <ul class='specs list-inline'>
+        <li>GPS: {{phone.connectivity.gps | checkmark }}</li>
+        <li>Infrared: {{phone.connectivity.infrared | checkmark }}</li>
+      </ul>
+    </div>
+  </div>
+</div>

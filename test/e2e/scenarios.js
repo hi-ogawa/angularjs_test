@@ -2,6 +2,7 @@
 (function() {
   'use strict';
   describe('PhoneCat App', function() {
+    it('should redirect');
     return describe('Phone list view', function() {
       beforeEach(function() {
         return browser.get('app/index.html');

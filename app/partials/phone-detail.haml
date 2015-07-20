@@ -1,0 +1,17 @@
+.container
+  .row
+    .col-md-5
+      %img.phone{'ng-src' => '{{ mainImageUrl }}'}
+    .col-md-7
+      %h1 {{phone.name}}
+      %p  {{phone.description}}
+       
+      %ul.phone-thumbs.list-inline
+        %li{'ng-repeat' => 'image in phone.images'}
+          %a.btn.btn-default
+            %img{'ng-src' => '{{image}}', 'ng-click' => 'setImage(image)'}
+
+      %h4 Specification:
+      %ul.specs.list-inline
+        %li GPS: {{phone.connectivity.gps | checkmark }}
+        %li Infrared: {{phone.connectivity.infrared | checkmark }}

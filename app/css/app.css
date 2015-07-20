@@ -1,3 +1,9 @@
 /* app css stylesheet */
 body {
   padding-top: 20px; }
+
+.phone-thumbs li {
+  width: 25%;
+  padding: 2%; }
+  .phone-thumbs li img {
+    width: 100%; }

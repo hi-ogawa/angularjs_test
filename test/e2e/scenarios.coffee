@@ -1,6 +1,9 @@
 'use strict'
 
 describe 'PhoneCat App', ->
+
+  it 'should redirect'
+
   describe 'Phone list view', ->
 
     beforeEach -> browser.get 'app/index.html'
