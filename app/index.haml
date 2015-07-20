@@ -1,0 +1,29 @@
+!!! 5
+%html{'ng-app' => 'phonecatApp'}
+  %head
+    %meta{charset: 'utf-8'}
+    %title title
+    %link{rel: 'stylesheet', href: 'bower_components/bootstrap/dist/css/bootstrap.css'}
+    %link{rel: 'stylesheet', href: 'css/app.css'}
+    %script{src: 'bower_components/angular/angular.js'}
+    %script{src: 'js/controllers.js'}
+
+  %body{'ng-controller' => 'PhoneListCtrl'}
+    .container-fluid
+      .row
+        .col-md-2
+          Search:
+          %input{'ng-model' => 'query'}
+          %br
+          Sort by:
+          %select{'ng-model' => 'orderProp'}
+            %option{value: 'name'} Alphabetical
+            %option{value: 'age'}  Newest
+        .col-md-10
+          %ul.phones
+            %li{'ng-repeat' => 'phone in phones | filter:query | orderBy:orderProp'}
+              %a{href: '#/phones/{{phone.id}}', class: 'thumbnail'} 
+                %img{'ng-src' => '{{phone.imageUrl}}'}
+              %a{href: '#/phones/{{phone.id}}'}
+                {{phone.name}}
+              %p {{phone.snippet}}
