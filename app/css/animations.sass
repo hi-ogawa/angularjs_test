@@ -1,8 +1,11 @@
 @import "compass/css3/transition"
 
-/* .phone-listing
+/* phone-list filter listing animation
+
+/* just putting '.phone-listing' doesn't work since it's not so specific as defined in app.sass by 'ul.phones .phone-listing'
+
 ul.phones .phone-listing
-  @include transition(1s ease-in all)
+  @include transition(0.8s linear all)
 
   &.ng-enter, &.ng-move
     opacity: 0
@@ -22,3 +25,45 @@ ul.phones .phone-listing
       height: 0
       padding-top: 0
       padding-bottom: 0
+
+
+/* ng-view routing animation
+.view-container
+  position: relative
+
+  .view-frame
+    @include transition(0.5s linear all)
+   
+    &.ng-enter, &.ng-move
+      opacity: 0
+   
+    &.ng-move.ng-move-active, &.ng-enter.ng-enter-active
+      opacity: 1
+   
+    &.ng-leave
+      opacity: 1
+   
+      &.ng-leave-active
+        opacity: 0
+
+
+/* phone-detail main-photo change animation
+
+.phone
+  @include transition(0.5s linear all)
+
+  &.ng-hide-add
+    top: 0px
+    opacity: 1
+
+  &.ng-hide-add-active
+    top: 200px
+    opacity: 0
+
+  &.ng-hide-remove
+    top: -200px
+    opacity: 0
+
+  &.ng-hide-remove-active
+    top: 0px
+    opacity: 1

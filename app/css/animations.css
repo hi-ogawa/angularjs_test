@@ -1,9 +1,10 @@
-/* .phone-listing */
+/* phone-list filter listing animation */
+/* just putting '.phone-listing' doesn't work since it's not so specific as defined in app.sass by 'ul.phones .phone-listing' */
 ul.phones .phone-listing {
-  -moz-transition: ease-in 1s all;
-  -o-transition: ease-in 1s all;
-  -webkit-transition: ease-in 1s all;
-  transition: ease-in 1s all; }
+  -moz-transition: linear 0.8s all;
+  -o-transition: linear 0.8s all;
+  -webkit-transition: linear 0.8s all;
+  transition: linear 0.8s all; }
   ul.phones .phone-listing.ng-enter, ul.phones .phone-listing.ng-move {
     opacity: 0;
     height: 0;
@@ -19,3 +20,39 @@ ul.phones .phone-listing {
       height: 0;
       padding-top: 0;
       padding-bottom: 0; }
+
+/* ng-view routing animation */
+.view-container {
+  position: relative; }
+  .view-container .view-frame {
+    -moz-transition: linear 0.5s all;
+    -o-transition: linear 0.5s all;
+    -webkit-transition: linear 0.5s all;
+    transition: linear 0.5s all; }
+    .view-container .view-frame.ng-enter, .view-container .view-frame.ng-move {
+      opacity: 0; }
+    .view-container .view-frame.ng-move.ng-move-active, .view-container .view-frame.ng-enter.ng-enter-active {
+      opacity: 1; }
+    .view-container .view-frame.ng-leave {
+      opacity: 1; }
+      .view-container .view-frame.ng-leave.ng-leave-active {
+        opacity: 0; }
+
+/* phone-detail main-photo change animation */
+.phone {
+  -moz-transition: linear 0.5s all;
+  -o-transition: linear 0.5s all;
+  -webkit-transition: linear 0.5s all;
+  transition: linear 0.5s all; }
+  .phone.ng-hide-add {
+    top: 0px;
+    opacity: 1; }
+  .phone.ng-hide-add-active {
+    top: 200px;
+    opacity: 0; }
+  .phone.ng-hide-remove {
+    top: -200px;
+    opacity: 0; }
+  .phone.ng-hide-remove-active {
+    top: 0px;
+    opacity: 1; }
