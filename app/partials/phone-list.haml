@@ -9,10 +9,12 @@
         %option{value: 'name'} Alphabetical
         %option{value: 'age'}  Newest
     .col-md-10
-      %ul.phones.inline-list
-        %li{'ng-repeat' => 'phone in phones | filter:query | orderBy:orderProp'}
-          %a{href: '#/phones/{{phone.id}}', class: 'thumbnail'} 
-            %img{'ng-src' => '{{phone.imageUrl}}'}
-          %a{href: '#/phones/{{phone.id}}'}
-            {{phone.name}}
-          %p {{phone.snippet}}
+      %ul.phones
+        %li.well{'ng-repeat' => 'phone in phones | filter:query | orderBy:orderProp'}
+          .col-md-2
+            %a.thumbnail{href: '#/phones/{{phone.id}}'}
+              %img{'ng-src' => '{{phone.imageUrl}}'}
+          .col-md-10
+            %a{href: '#/phones/{{phone.id}}'}
+              {{phone.name}}
+            %p {{phone.snippet}}

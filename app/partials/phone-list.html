@@ -11,15 +11,19 @@
       </select>
     </div>
     <div class='col-md-10'>
-      <ul class='phones inline-list'>
-        <li ng-repeat='phone in phones | filter:query | orderBy:orderProp'>
-          <a class='thumbnail' href='#/phones/{{phone.id}}'>
-            <img ng-src='{{phone.imageUrl}}'>
-          </a>
-          <a href='#/phones/{{phone.id}}'>
-            {{phone.name}}
-          </a>
-          <p>{{phone.snippet}}</p>
+      <ul class='phones'>
+        <li class='well' ng-repeat='phone in phones | filter:query | orderBy:orderProp'>
+          <div class='col-md-2'>
+            <a class='thumbnail' href='#/phones/{{phone.id}}'>
+              <img ng-src='{{phone.imageUrl}}'>
+            </a>
+          </div>
+          <div class='col-md-10'>
+            <a href='#/phones/{{phone.id}}'>
+              {{phone.name}}
+            </a>
+            <p>{{phone.snippet}}</p>
+          </div>
         </li>
       </ul>
     </div>

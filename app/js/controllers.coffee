@@ -2,9 +2,10 @@
 
 phonecatControllers = angular.module 'phonecatControllers', []
 
-phonecatControllers.controller 'PhoneListCtrl', ['$scope', '$http', ($scope, $http) ->
-    $http.get('phones/phones.json').success (data) ->
-      $scope.phones = data
+phonecatControllers.controller 'PhoneListCtrl', ['$scope', 'Phone', ($scope, Phone) ->
+    $scope.phones = Phone.query()
+    # $http.get('phones/phones.json').success (data) ->
+    #   $scope.phones = data
     $scope.orderProp = 'age'
   ]
 

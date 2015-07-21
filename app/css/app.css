@@ -2,6 +2,18 @@
 body {
   padding-top: 20px; }
 
+/* photo-list */
+ul.phones {
+  list-style: none; }
+  ul.phones li {
+    height: 145px; }
+    ul.phones li div {
+      height: auto; }
+      ul.phones li div .thumbnail {
+        padding: 0;
+        margin: 0; }
+
+/* photo-detail */
 .phone-thumbs li {
   width: 25%;
   padding: 2%; }
