@@ -5,13 +5,11 @@ body {
 /* photo-list */
 ul.phones {
   list-style: none; }
-  ul.phones li {
+  ul.phones .phone-listing {
     height: 145px; }
-    ul.phones li div {
-      height: auto; }
-      ul.phones li div .thumbnail {
-        padding: 0;
-        margin: 0; }
+    ul.phones .phone-listing .thumbnail {
+      padding: 0;
+      margin: 0; }
 
 /* photo-detail */
 .phone-thumbs li {

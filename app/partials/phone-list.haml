@@ -10,7 +10,7 @@
         %option{value: 'age'}  Newest
     .col-md-10
       %ul.phones
-        %li.well{'ng-repeat' => 'phone in phones | filter:query | orderBy:orderProp'}
+        %li.well.phone-listing{'ng-repeat' => 'phone in phones | filter:query | orderBy:orderProp'}
           .col-md-2
             %a.thumbnail{href: '#/phones/{{phone.id}}'}
               %img{'ng-src' => '{{phone.imageUrl}}'}
